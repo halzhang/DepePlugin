@@ -51,26 +51,26 @@ val check by tasks.getting(Task::class) {
     dependsOn(functionalTest)
 }
 
-
-group = "com.hqwx.plugin"
-version = "0.0.1-SNAPSHOT"
-
-tasks.register<Jar>("sourcesJar") {
-    archiveClassifier.set("sources")
-    from(sourceSets.main.get().allJava)
-}
-
-publishing {
-    publications {
-        create<MavenPublication>("maven") {
-            groupId = "com.hqwx.plugin"
-            artifactId = "depe"
-            version = "0.0.1-SNAPSHOT"
-            from(components["java"])
-            artifact(tasks["sourcesJar"])
-        }
-    }
-
+//
+//group = "com.hqwx.plugin"
+//version = "0.0.1-SNAPSHOT"
+//
+//tasks.register<Jar>("sourcesJar") {
+//    archiveClassifier.set("sources")
+//    from(sourceSets.main.get().allJava)
+//}
+//
+//publishing {
+//    publications {
+//        create<MavenPublication>("maven") {
+//            groupId = "com.hqwx.plugin"
+//            artifactId = "depe"
+//            version = "0.0.1-SNAPSHOT"
+//            from(components["java"])
+//            artifact(tasks["sourcesJar"])
+//        }
+//    }
+//
 //    repositories {
 //        maven {
 //            credentials {
